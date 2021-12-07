@@ -35,7 +35,7 @@ app.get('/api/hello', function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-app.get('/api/:date', function (req, res) {
+app.get('/api/:date?', function (req, res) {
   let regPat = String(req.params.date).split(/-/);
   let dateInput = Date.now();
   if (regPat.length > 1) {
