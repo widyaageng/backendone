@@ -40,8 +40,8 @@ app.get('/api/:date?', function (req, res) {
   let dateInput = Date.now();
   if (regPat.length > 1) {
     dateInput = new Date(parseInt(regPat[0]), parseInt(regPat[1]) - 1, parseInt(regPat[2]));
-  } else if (regPat.match(/[0-9]+/).input === regPat) {
-    dateInput = new Date(parseInt(regPat));
+  } else if (String(req.params.date).match(/[0-9]+/).input === regPat[0]) {
+    dateInput = new Date(parseInt(regPat[0]));
   } else {
     //
   }
