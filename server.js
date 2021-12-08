@@ -51,9 +51,9 @@ app.get('/api/:date?', function (req, res) {
   } else if (req.params.date === undefined) {
     // dateInput as it is
   } else {
-    dateInput = null;
+    dateInput = new Date(req.params.date);
   }
-  if (dateInput == null) {
+  if (dateInput.toString() == 'Invalid Date') {
     res.send({
       error: "Invalid Date"
     });

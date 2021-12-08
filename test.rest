@@ -25,3 +25,7 @@ GET http://localhost:3000/api/asdfasdf HTTP/1.1
 GET http://localhost:3000/api/ HTTP/1.1
 
 ################################
+
+GET http://localhost:3000/api/4%20April%201965,%20GMT HTTP/1.1
+
+################################
